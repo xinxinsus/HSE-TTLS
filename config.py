@@ -20,7 +20,7 @@ TORCH_SEED = 129
 class Config(object):
     def __init__(self):
         self.split = 'split10'
-        self.bert_cache_path = '/media/tiffany/新加卷/PycharmProjects/ubuntu/pretrained_model/bert-base-chinese'
+        self.bert_cache_path = '/pretrained_model/bert-base-chinese'
         self.epochs = 20
         self.batch_size = 2
         self.lr = 1e-5
