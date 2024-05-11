@@ -57,7 +57,7 @@ def evaluate_one_batch(batch, model, tokenizer):
     f_emo_pred = model(feq, feq_mask, feq_seg, feq_len, fe_clause_len, fe_doc_len, fe_adj, 'f_emo')
     temp_emo_f_prob = f_emo_pred.masked_select(fe_an_mask.bool().cuda()).tolist()
     for idx in range(len(temp_emo_f_prob)):
-        if (temp_emo_f_prob[idx] > 0.5 and idx + 1 in emo_dictionary[str(doc_id)])  or  0.6*temp_emo_f_prob[idx] > 0.5:
+        if (temp_emo_f_prob[idx] > 0.5 and idx + 1 in emo_dictionary[str(doc_id)]): #  or  0.6*temp_emo_f_prob[idx] > 0.5:
                 pred_emo_f.append(idx)
                 pred_emo_single.append(idx + 1)
     for idx_emo in pred_emo_f:
