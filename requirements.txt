@@ -1,0 +1,6 @@
+transformers~=4.30.2
+networks~=0.3.7
+numpy~=1.21.5
+scipy~=1.7.3
+python=3.7
+torch=1.6

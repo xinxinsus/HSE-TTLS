@@ -1,0 +1,3 @@
+- load the BERT model to ‘pretrained_model’
+- run dataProcess.py
+- run HSE-TTLS.py
